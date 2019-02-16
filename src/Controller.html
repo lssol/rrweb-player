@@ -179,7 +179,8 @@
         setTimeout(() => {
           this.set({ isPlaying: true });
         }, 0);
-        current.replayer.play(0);
+        const {currentTime} = this.get()
+        current.replayer.play(currentTime);
         current.replayer.on('pause', () => {
           this.set({ isPlaying: false });
         });

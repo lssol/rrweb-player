@@ -1,7 +1,7 @@
 <div class="rr-player" ref:player style="{playerStyle}">
   <div class="rr-player__frame" ref:frame { style }></div>
   {#if replayer}
-  <Controller { replayer } {showController} on:fullscreen="fullscreen()" />
+  <Controller { replayer } {showController} on:fullscreen="fullscreen()" bind:currentTime/>
   {/if}
 </div>
 
@@ -29,6 +29,7 @@
         height: 576,
         events: [],
         replayer: null,
+        currentTime: 0
       };
     },
     computed: {
