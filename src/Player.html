@@ -6,7 +6,7 @@
 </div>
 
 <script>
-  import { Replayer } from 'rrweb';
+  import rrweb from './rrweb/rrweb.js';
   import 'rrweb/dist/rrweb.min.css';
   import {
     inlineCss,
@@ -68,7 +68,7 @@
     },
     oncreate() {
       const { events } = this.get();
-      const replayer = new Replayer(events, {
+      const replayer = new rrweb.Replayer(events, {
         speed: 1,
         root: this.refs.frame,
         skipInactive: true,
